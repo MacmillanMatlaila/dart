@@ -8,6 +8,12 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "Dart (Dart apprentice\\exercise4.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "Dart apprentice\\exercise4.dart"
         }
     ]
 }
