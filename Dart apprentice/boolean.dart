@@ -4,7 +4,7 @@ void main() {
   const myAge = 29;
 
   //Boolean that  uses Boolean logic to determine if the age denotes someone in the age range of 13 to 19.
-  const isTeenager;
+  const isTeenager >= 13 && isTeenager <=19;
 
 
   
