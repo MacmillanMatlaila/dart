@@ -1,15 +1,14 @@
-void main(){
-  enum AudioState { playing, paused, stopped };
+enum AudioState { playing, paused, stopped }
 
+void main() {
   const audioState = AudioState.playing;
-switch (audioState) {
-case AudioState.paused:
-print('Paused.');
-break;
-case AudioState.stopped:
-print('Stopped');
-break;
-
-}
-
+  switch (audioState) {
+    case AudioState.playing:
+      print('Music playing');
+      break;
+    case AudioState.paused:
+    case AudioState.stopped:
+      print('Music paused/stopped');
+      break;
+  }
 }

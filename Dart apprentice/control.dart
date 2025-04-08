@@ -1,3 +1,5 @@
+enum Weather { sunny, snowy, cloudy, rainy }
+
 void main() {
   if (2 > 1) {
     print('yes');
@@ -57,28 +59,24 @@ void main() {
  }
     */
 
+  //Enumerated types/ Enums
 
-//Enumerated types/ Enums
-
-/*Enumerated types can use them to define your
+  /*Enumerated types can use them to define your
 own type with a finite number of options*/
 
-enum Weather { sunny, snowy, cloudy, rainy, }
+  //Using enums with Switch statements
 
-//Using enums with Switch statements
-
-const weatherToday = Weather.cloudy;
-switch (weatherToday) {
-case Weather.sunny:
-print('Put on sunscreen.');
-break;
-case Weather.snowy:
-print('Get your skis.');
-break;
-case Weather.cloudy:
-case Weather.rainy:
-print('Bring an umbrella.');
-break;
-}
-
+  const weatherToday = Weather.cloudy;
+  switch (weatherToday) {
+    case Weather.sunny:
+      print('Put on sunscreen.');
+      break;
+    case Weather.snowy:
+      print('Get your skis.');
+      break;
+    case Weather.cloudy:
+    case Weather.rainy:
+      print('Bring an umbrella.');
+      break;
+  }
 }
