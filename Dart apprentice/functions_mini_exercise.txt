@@ -1,0 +1,9 @@
+void main(){
+  String name = 'Macmillan';
+  int numberPeople = 10;
+  print(youAreWonderful(name, numberPeople));
+}
+
+String youAreWonderful(String name, int numberPeople){
+  return 'You are wonderful, $name, $numberPeople people think so';
+}
