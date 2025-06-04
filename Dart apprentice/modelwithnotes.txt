@@ -1,0 +1,70 @@
+void main() {
+  /*Instance*/
+  var son_1 = MySelf('Mac', 28, 'Mont Acres');
+  /*Instance*/
+  var son_2 = MySelf('Thato', 15, 'Mont Acres');
+  /*Instance*/
+  var mom = Hobbies(
+    ["football", "tennis", "netball"],
+    'Pretty',
+    48,
+    'Mont Acres',
+  ); /*Now change the calling class name in main from MySelf to Hobbies*/
+
+  /*You can now print instances you created by using variable name and property as variable.property*/
+
+  /*print(son_1.name);
+  print(son_1.age);
+  print(son_1.address);
+  print(son_2.name);
+  print(son_2.age);
+  print(son_2.address);
+  print(mom.name);
+  print(mom.age);
+  print(mom.address);*/
+
+  /*now instead of simply using print(variable.property) I control the format of the print by defining a method within the class MySelf such that each instance of the class can access the method on instance*/
+
+  print(son_1.format);
+  print(son_1.format);
+  print(son_1.format);
+  print(son_2.format);
+  print(son_2.format);
+  print(son_2.format);
+  print(mom.format);
+  print(mom.format);
+  print(mom.format);
+}
+
+class MySelf {
+  //This are instance properties of the class MySelf
+  /*Property-1*/
+  String name;
+  /*Property-2*/
+  int age;
+  /*Property-3*/
+  String address;
+
+  /*A constructor function is created with the same name as the class and passes in the instance properties within the class with a 'this' infront.*/
+  MySelf(this.name, this.age, this.address);
+
+  //Method
+  String format() {
+    return '$name + '
+        ' + $age + '
+        ' + $address';
+  }
+}
+
+/*This new class extends MySelf class, thereby inherriting all it's properties, constructor functions and methods. it creates a subclass tfor hobbies*/
+class Hobbies extends MySelf {
+  List<String> sport;
+  //Constructor function for the hobbies class
+  Hobbies(this.sport, String name, int age, String address)
+    : super(name, age, address);
+  /* Create a subconstructor so that when we create a new hobbies object we are going to pass in this sport argument*/
+  /*within the subconstructor function pass in the types and properties of arguments also in parent constructor for exammple String name*/
+  /*now invoke a super function to explicitily invoke the constructor function in the parent class so thaat we can pass the parent class arguments into the super function*/
+  /*we can also write it shorthand instead of using the super functiion*/
+  Hobbies(this.sport, super.name, super.age, super.address);//Remember to commet out one hobbies subconstructor function
+}
